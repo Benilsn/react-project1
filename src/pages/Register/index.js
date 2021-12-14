@@ -1,105 +1,109 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import './Register.css';
 
-class Register extends Component {
+export default function Register() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            form: {
-                firstname: '',
-                lastname: '',
-                age: '',
-                email: "",
-                username: "",
-                password: ""
-            }
-        }
+    const [firstname, setFirstName] = useState('');
+    const [lastname, setLastName] = useState('');
+    const [age, setAge] = useState('');
+    const [email, setEmail] = useState('');
+    const [username, setUserName] = useState('');
+    const [password, setPassword] = useState('');
 
-        this.register = this.register.bind(this);
-        this.dataForm = this.dataForm.bind(this);
-    }
-
-    dataForm(e){
-        let form = this.state.form;
-        form[e.target.name] = e.target.value;
-        this.setState({form:form})
-    }
-
-    register(e){
-
-        const firstname = this.state.form.firstname;
+    function register(e){
 
         alert(firstname);
 
         e.preventDefault();
     }
 
-    render() {
-        return (
-            <>
-                <NavBar />
 
-                <div class="register-div">
-                    <h1 class="register-div">Register</h1>
-                    <form onSubmit={this.register}>
-                        <label class="register-div">First Name :</label>
-                        <input type="text" class="register-div" name="firstname" 
-                        value={this.state.form.firstName}
-                        onChange={this.dataForm}
+    return (
+        <>
+            <NavBar />
+
+            <div class="register-div">
+                <h1 class="register-div">Register</h1>
+                <form onSubmit={register}>
+                    <label class="register-div">First Name :</label>
+
+                    <input
+                        type="text"
+                        class="register-div"
+                        name="firstname"
+                        value={firstname}
+                        onChange={e => setFirstName(e.target.value)}
                         placeholder='First Name'></input>
-                        <br />
-                        <br />
+                    <br />
+                    <br />
 
-                        <label class="register-div" >Last Name :</label>
-                        <input type="text" class="register-div" name="lastname" 
-                        value={this.state.form.lastName}
-                        onChange={this.dataForm}
+                    <label class="register-div" >Last Name :</label>
+
+                    <input
+                        ype="text"
+                        class="register-div"
+                        ame="lastname"
+                        value={lastname}
+                        onChange={e => setLastName(e.target.value)}
                         placeholder='Last Name'></input>
-                        <br />
-                        <br />
+                    <br />
+                    <br />
 
-                        <label class="register-div">Age :</label>
-                        <input type="text" class="register-div" name="age" 
-                        value={this.state.form.age}
-                        onChange={this.dataForm}
+                    <label class="register-div">Age :</label>
+
+                    <input
+                        type="text"
+                        class="register-div"
+                        name="age"
+                        value={age}
+                        onChange={e => setAge(e.target.value)}
                         placeholder='Age'></input>
-                        <br />
-                        <br />
-                        <label class="register-div">E-mail :</label>
-                        <input type="email" class="register-div" name="email" 
-                        value={this.state.form.email}
-                        onChange={this.dataForm}
+                    <br />
+                    <br />
+                    <label class="register-div">E-mail :</label>
+
+                    <input
+                        type="email"
+                        class="register-div"
+                        name="email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
                         placeholder='E-mail'></input>
-                        <br />
-                        <br />
+                    <br />
+                    <br />
 
-                        <label class="register-div">Username :</label>
-                        <input type="text" class="register-div" name="username" 
-                        value={this.state.form.username}
-                        onChange={this.dataForm}
+                    <label class="register-div">Username :</label>
+
+                    <input
+                        type="text"
+                        class="register-div"
+                        name="username"
+                        value={username}
+                        onChange={e => setUserName(e.target.value)}
                         placeholder='Username'></input>
-                        <br />
-                        <br />
+                    <br />
+                    <br />
 
-                        <label class="register-div">Password :</label>
-                        <input type="password" class="register-div" name="password" 
-                        value={this.state.form.password}
-                        onChange={this.dataForm}
+                    <label class="register-div">Password :</label>
+
+                    <input
+                        type="password"
+                        class="register-div"
+                        name="password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
                         placeholder='Password'></input>
 
-                        <button class="register-div" type="submit">Submit</button>
-                    </form>
+                    <button class="register-div" type="submit">Submit</button>
+                </form>
 
-                </div>
+            </div>
 
-                <Footer />
+            <Footer />
 
-            </>
-        )
-    }
+        </>
+    )
+
 }
-
-export default Register;

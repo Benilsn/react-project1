@@ -3,7 +3,7 @@ import './Home.css';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 
-function Home (){
+export default  function Home (){
 
     return (
         <>
@@ -16,5 +16,3 @@ function Home (){
         </>
     );
 }
-
-export default Home;

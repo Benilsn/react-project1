@@ -36,6 +36,7 @@ button.login-div {
     height: 2rem;
     width: 5rem;
     left: 40%;
+    transition: all 0.5s;
 }
 
 button.login-div:hover {

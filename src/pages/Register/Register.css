@@ -26,7 +26,7 @@ label.register-div{
 
 input.register-div {
     position: relative;
-    transform: translate(12rem, 3rem);
+    transform: translate(11rem, 3rem);
     height: 1.8rem;
 }
 
@@ -37,6 +37,7 @@ button.register-div {
     height: 2rem;
     width: 5rem;
     letter-spacing: 0.1rem;
+    transition: all 0.5s;
     
 }
 

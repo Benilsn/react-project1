@@ -25,6 +25,7 @@ nav.menu {
 .menu a {
     color: rgb(113, 188, 201);
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 .menu li a:hover {
