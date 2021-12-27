@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import User from './pages/Users';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='/register' element={<Register />} />
+                <Route exact path='/user' element={<User />} />
                 <Route path='*' element={<NotFound/>}/>
             </Routes>
             <Footer />

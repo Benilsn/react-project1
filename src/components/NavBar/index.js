@@ -4,12 +4,12 @@ import './NavBar.css';
 export default function NavBar(){
     return (
         <header>
-        <nav class="menu">
+        <nav className="menu">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="">List Model</a>
                     <ul>
-                        <li><a href="">Item 1 </a></li>
+                        <li><a href="/user">All Users </a></li>
                         <li><a href="">Item 2</a></li>
                         <li><a href="">Item 3</a></li>
                         <li><a href="">Item 4 </a></li>
